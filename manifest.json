@@ -1,5 +1,4 @@
 {
-  // Require!
   "manifest_version": 2,
   "name": "My page action extention.",
   "version": "1.0",
@@ -11,9 +10,9 @@
     "128": "icons/icon_128x128.png"
   },
   "page_action": {
-    "default_icon": {                    // optional
-      "19": "icons/icon_19x19.png",           // optional
-      "38": "icons/icon_38x38.png"            // optional
+    "default_icon": {
+      "19": "icons/icon_19x19.png",
+      "38": "icons/icon_38x38.png"
     },
     "default_title": "My page action."
   },
