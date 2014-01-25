@@ -1,0 +1,34 @@
+{
+  // Require!
+  "manifest_version": 2,
+  "name": "My page action extention.",
+  "version": "1.0",
+
+  "description": "Inject some code for some pages.",
+  "icons": {
+    "16": "icons/icon_16x16.png",
+    "48": "icons/icon_48x48.png",
+    "128": "icons/icon_128x128.png"
+  },
+  "page_action": {
+    "default_icon": {                    // optional
+      "19": "icons/icon_19x19.png",           // optional
+      "38": "icons/icon_38x38.png"            // optional
+    },
+    "default_title": "My page action."
+  },
+  "background": { "scripts": ["script/background.js"] },
+  "content_scripts" :[
+    {
+      "matches" : [
+        "http://*.example.com/*",
+        "http://www.google.co.jp/*",
+        "https://www.google.co.jp/*"
+      ],
+      "js" : ["script/content_script.js"],
+      "run_at" : "document_idle",
+      "all_frames" : true
+    }
+  ],
+  "web_accessible_resources": ["script/main.js"]
+}
